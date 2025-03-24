@@ -4,3 +4,5 @@ fastapi
 torch
 numpy
 uvicorn
+python-multipart
+accelerate>=0.26.0
