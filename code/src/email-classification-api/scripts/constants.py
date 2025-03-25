@@ -1,32 +1,30 @@
 # Define your constants here
 LABEL_MAP = {
     "Loan_Application_and_Origination_Requests": {
-        "Student_Loan_Application": 0,
-        "Home_Loan_Application": 1
+        "Student_Loan_Application": 0,        
     },
     "Loan_Insurance_and_Protection_Requests": {
-        "Loan_Protection_Insurance_Request": 2,
-        "Payment_Protection_Request": 3
+        "Loan_Protection_Insurance_Request": 1,
+        "Payment_Protection_Request": 2
     },
     "Loan_Reporting_and_Documentation_Requests": {
-        "Loan_Statement_Request": 4,
-        "Payment_Confirmation_Request": 5
+        "Loan_Statement_Request": 3,
+        "Payment_Confirmation_Request": 4
     },
     "Loan_Account_Suspensions_and_Holds": {
-        "Loan_Hold_Request": 6,
-        "Suspension_of_Payment_Request": 7
+        "Loan_Hold_Request": 5,
+        "Suspension_of_Payment_Request": 6
     }
 }
 
 EXTRACTION_FIELDS = {
     0: ["Full Name", "Loan Amount Requested", "Date of Birth", "Social Security Number", "Permanent Address", "University Name", "Degree Program", "Expected Graduation Date"],
-    1: ["Full Name", "Loan Amount Requested", "Property Address", "Date of Birth", "Social Security Number"],
+    1: ["Full Name", "Account Number", "Contact Information"],
     2: ["Full Name", "Account Number", "Contact Information"],
     3: ["Full Name", "Account Number", "Contact Information"],
-    4: ["Full Name", "Account Number", "Contact Information"],
-    5: ["Account Number", "Transaction Date", "Payment Date", "Payment Amount"],
-    6: ["Full Name", "Account Number", "Contact Information"],
-    7: ["Full Name", "Account Number", "Contact Information"]
+    4: ["Account Number", "Transaction Date", "Payment Date", "Payment Amount"],
+    5: ["Full Name", "Account Number", "Contact Information"],
+    6: ["Full Name", "Account Number", "Contact Information"]
 }
 
 def get_label_value(type_label, subtype_label):
