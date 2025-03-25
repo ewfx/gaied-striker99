@@ -9,7 +9,7 @@ def extract_parameters_with_huggingface(text: str, email_type: int):
     parameters = {}
     ner_results = ner_pipeline(text)
     expected_fields = EXTRACTION_FIELDS.get(email_type, [])
-
+    print("Extracted Parameters:", expected_fields)  # Debug log
     for field in expected_fields:
         field_key = field.lower().replace(" ", "_")
         parameters[field_key] = None
@@ -38,4 +38,4 @@ def extract_parameters(text: str, email_type: int):
     parameters = extract_parameters_with_huggingface(text, email_type)
     if not any(parameters.values()):  # Fallback to keyword matching if NER fails
         parameters = extract_parameters_with_keywords(text, email_type)
-    return parameters
+    return parameters if isinstance(parameters, dict) else {}

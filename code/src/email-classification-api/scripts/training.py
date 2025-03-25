@@ -22,12 +22,14 @@ def train_model(training_data):
     """Train the email classification model."""
     texts = []
     for file_name in training_data.files:
-        file_path = os.path.join("data/sample_emails", file_name)
+        file_path = os.path.join("C:/Users/Admin/hackathon/git/gaied-striker99/code/src/email-classification-api/data/train_data", file_name)
+        print("Training on file:", file_path)  # Debug log
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"File {file_name} not found")
 
         msg = load_eml(file_path)
         texts.append(extract_text_from_eml(msg))
+        labels = training_data.labels
 
     numerical_labels = [get_label_value(label["type"], label["subtype"]) for label in training_data.labels]
     inputs = tokenizer(texts, return_tensors='pt', truncation=True, padding=True, max_length=512)
