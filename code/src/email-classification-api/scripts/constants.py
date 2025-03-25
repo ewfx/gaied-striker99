@@ -4,9 +4,17 @@ LABEL_MAP = {
         "Student_Loan_Application": 0,
         "Home_Loan_Application": 1
     },
-    "Customer_Service_Inquiries": {
-        "Account_Balance_Inquiry": 2,
-        "Transaction_Dispute": 3
+    "Loan_Insurance_and_Protection_Requests": {
+        "Loan_Protection_Insurance_Request": 2,
+        "Payment_Protection_Request": 3
+    },
+    "Loan_Reporting_and_Documentation_Requests": {
+        "Loan_Statement_Request": 4,
+        "Payment_Confirmation_Request": 5
+    },
+    "Loan_Account_Suspensions_and_Holds": {
+        "Loan_Hold_Request": 6,
+        "Suspension_of_Payment_Request": 7
     }
 }
 
