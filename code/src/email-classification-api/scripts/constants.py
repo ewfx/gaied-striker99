@@ -21,8 +21,12 @@ LABEL_MAP = {
 EXTRACTION_FIELDS = {
     0: ["Full Name", "Loan Amount Requested", "Date of Birth", "Social Security Number", "Permanent Address", "University Name", "Degree Program", "Expected Graduation Date"],
     1: ["Full Name", "Loan Amount Requested", "Property Address", "Date of Birth", "Social Security Number"],
-    2: ["Account Number", "Inquiry Date"],
-    3: ["Account Number", "Transaction Date", "Transaction Amount", "Dispute Reason"]
+    2: ["Full Name", "Account Number", "Contact Information"],
+    3: ["Full Name", "Account Number", "Contact Information"],
+    4: ["Full Name", "Account Number", "Contact Information"],
+    5: ["Account Number", "Transaction Date", "Payment Date", "Payment Amount"],
+    6: ["Full Name", "Account Number", "Contact Information"],
+    7: ["Full Name", "Account Number", "Contact Information"]
 }
 
 def get_label_value(type_label, subtype_label):
